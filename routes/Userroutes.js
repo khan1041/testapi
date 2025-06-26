@@ -15,7 +15,8 @@ const router=express.Router()
 router.post('/register',register)
 router.post("/login",login)
 router.get("/profile",isAuthenticated,profile)
-router.get("/get",alluser)
+router.get("/get",isAuthenticated,alluser)
+
 //router.route("/profile/update").post(isAuthenticated,singleUpload,updateProfile);
 
 //Blog router
